@@ -10,22 +10,22 @@ stages:
     outs:
     - path: data/features.csv
       hash: md5
-      md5: 7903fb12a131909ea9907b2d4393f56b
-      size: 9914
+      md5: 7fb0afd691015fb97fe7f9c7a2dfc671
+      size: 9879
   train_lr:
     cmd: python src/train_lr.py
     deps:
     - path: data/features.csv
       hash: md5
-      md5: 7903fb12a131909ea9907b2d4393f56b
-      size: 9914
+      md5: 7fb0afd691015fb97fe7f9c7a2dfc671
+      size: 9879
   train_rf:
     cmd: python src/train_rf.py
     deps:
     - path: data/features.csv
       hash: md5
-      md5: 7903fb12a131909ea9907b2d4393f56b
-      size: 9914
+      md5: 7fb0afd691015fb97fe7f9c7a2dfc671
+      size: 9879
   evaluate:
     cmd: python src/evaluate_models.py
     deps:
@@ -40,5 +40,5 @@ stages:
     outs:
     - path: reports/metrics_report.json
       hash: md5
-      md5: 92dc0fa178e733e6933586d99f1b91e2
-      size: 54
+      md5: b4029b08e55a01fc027846ebda06c953
+      size: 53
