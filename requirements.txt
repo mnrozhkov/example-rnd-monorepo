@@ -2,6 +2,7 @@ dvc>=3.48.0
 dvclive>=3.45.0
 joblib
 jupyterlab
+matplotlib
 pandas
 scikit-learn
 

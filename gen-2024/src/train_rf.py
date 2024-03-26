@@ -32,7 +32,7 @@ def train_model_RF():
             path=MODEL_PATH,
             type="model",
             name="model_RF",
-            labels=["rf"],
+            labels=["rf", "example-rnd-monorepo", "gen-2024"],
         )
 
     time.sleep(2)

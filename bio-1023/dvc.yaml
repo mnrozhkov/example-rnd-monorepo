@@ -14,11 +14,13 @@ artifacts:
     type: model
     labels:
     - bio-1023
+    - example-rnd-monorepo
   data-bio-1023:
     path: data/features.csv
     type: dataset
     labels:
     - bio-1023
+    - example-rnd-monorepo
     meta:
     - columns:
       - feature_1
