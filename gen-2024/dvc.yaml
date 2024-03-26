@@ -30,6 +30,8 @@ artifacts:
     type: model
     labels:
     - lr
+    - example-rnd-monorepo
+    - gen-2024
   model_RF:
     path: models/model_RF_new.pkl
     type: model

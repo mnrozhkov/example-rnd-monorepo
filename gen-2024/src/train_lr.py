@@ -31,7 +31,7 @@ def train_model_LR():
             path='models/model_LR.pkl',
             type="model",
             name="model_LR",
-            labels=["lr"],
+            labels=["lr", "example-rnd-monorepo", "gen-2024"],
         )
 
     print("Training Logistic Regression model - COMPLETE")
