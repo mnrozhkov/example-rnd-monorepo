@@ -1,4 +1,5 @@
 dvc>=3.48.0
+dvc-gs>=3.0.1
 dvclive>=3.45.0
 joblib
 jupyterlab

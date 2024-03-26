@@ -36,3 +36,39 @@ Workflow:
 - Navigate to the study directory: `cd gen-2024`
 - Run the pipeline: `dvc exp run`
 - Commit & push results with Git and DVC
+
+
+## Collaboration workflow
+
+### 1 - Setup DVC remote storage
+
+```bash
+dvc add remote gcp gs://my-bucket
+```
+
+### 2 - Push artifacts to remote storage
+
+```bash
+dvc push 
+```
+
+### 3 - Pull artifacts from remote storage
+
+```bash
+dvc pull
+```
+
+### 4 - Pull specific artifact from remote storage
+
+```bash
+# git checkout <branch>/<commit>
+dvc pull bio-1023/manifest/manifest.pkl
+```
+
+### 5 - Pull specific artifact from remote storage
+
+```bash
+# git checkout <branch>/<commit>
+dvc artifacts get bio-1023/manifest
+```
+
