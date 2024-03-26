@@ -1,0 +1,37 @@
+stages:
+  data:
+    cmd: python src/prepare_data.py
+    deps:
+    - src/prepare_data.py
+    outs:
+    - data/features.csv
+
+  train_rf:
+    cmd: python src/train_rf.py
+    deps:
+    - data/features.csv
+
+  train_lr:
+    cmd: python src/train_lr.py
+    deps:
+    - data/features.csv
+
+  evaluate:
+    cmd: python src/evaluate_models.py
+    deps:
+    - models/model_rf.pkl
+    - models/model_lr.pkl
+    metrics:
+    - reports/metrics_report.json
+
+artifacts:
+  model_LR:
+    path: models/model_LR.pkl
+    type: model
+    labels:
+    - lr
+  model_RF:
+    path: models/model_RF_new.pkl
+    type: model
+    labels:
+    - rf
