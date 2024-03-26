@@ -23,7 +23,7 @@ def train_model_RF():
     model.fit(X, y)
 
     # Save the trained model
-    MODEL_PATH = "models/model_RF_new.pkl"
+    MODEL_PATH = "models/model_RF.pkl"
     joblib.dump(model, MODEL_PATH)
 
 

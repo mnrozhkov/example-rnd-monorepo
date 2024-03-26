@@ -19,11 +19,12 @@ stages:
   evaluate:
     cmd: python src/evaluate_models.py
     deps:
-    - models/model_rf.pkl
-    - models/model_lr.pkl
-    metrics:
-    - reports/metrics_report.json
+    - data/features.csv
+    - models/model_RF.pkl
+    - models/model_LR.pkl
 
+metrics:
+- reports/evaluate.json
 artifacts:
   model_LR:
     path: models/model_LR.pkl
@@ -33,9 +34,16 @@ artifacts:
     - example-rnd-monorepo
     - gen-2024
   model_RF:
-    path: models/model_RF_new.pkl
+    path: models/model_RF.pkl
     type: model
     labels:
     - rf
+    - example-rnd-monorepo
+    - gen-2024
+  model_lr:
+    path: models/model_lr.pkl
+    type: model
+    labels:
+    - lr
     - example-rnd-monorepo
     - gen-2024
