@@ -60,7 +60,7 @@ dvc pull
 
 #### 3.1 - Pull specific artifact (alternative ways)
 
-**[dvc pull](https://dvc.org/doc/command-reference/pull)** 
+**[dvc pull](https://dvc.org/doc/command-reference/pull)** - when you are inside the repository
 
 > Download tracked files or directories from [remote storage](https://dvc.org/doc/user-guide/data-management/remote-storage) based on the current `dvc.yaml` and `.dvc` files, and make them visible in the workspace.
 > 
@@ -70,10 +70,9 @@ git checkout a972308              # Commit created after DVC Remote setup
 dvc pull bio-1023/data/features.csv
 ```
 
-**[dvc get](https://dvc.org/doc/command-reference/get)** 
+**[dvc get](https://dvc.org/doc/command-reference/get)** - when you are outside the repository
 
 > Download a file or directory tracked by DVC or by Git into the current working directory.
-> 
 
 ```bash
 dvc get https://github.com/mnrozhkov/example-rnd-monorepo \
@@ -82,7 +81,7 @@ dvc get https://github.com/mnrozhkov/example-rnd-monorepo \
     --rev a972308
 ```
 
-**dvc artifacts get** 
+**[dvc artifacts get](https://dvc.org/doc/command-reference/artifacts/get)** - by registered aritfact name & version
 
 ```bash
 dvc artifacts get https://github.com/mnrozhkov/example-rnd-monorepo \
