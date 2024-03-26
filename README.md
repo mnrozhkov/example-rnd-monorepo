@@ -4,21 +4,35 @@
 
 ```bash
 python -m venv .venv
-echo "PYTHONPATH=$PWD" > .venv/bin/activate
+echo "PYTHONPATH=$PWD" >> .venv/bin/activate
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
 ## Run
 
-To run the pipeline, execute the following command:
+### 1 - Study `bio-1023`
 
-```bash
-dvc exp run
+> Example of workflow using Jupyter Notebooks & DVCLive
+
+Workflow:
+- Navigate to the study directory: `cd bio-1023`
+- Run code in JN: `jupyter lab`
+- Commit & push results with Git and DVC
+  
+### 2 - Study `gen-2024`
+
+> Common DVC pipeline with multiple stages
+
+```mermaid
+graph TD;
+    data --> train_rf["Random Forest"];
+    data --> train_lr["Linear Regression"];
+    train_rf --> evaluate;
+    train_lr --> evaluate;
 ```
 
-Run a separate stage with `-s` flag:
-
-```bash
-dvc exp run -s train_randomforest
-```
+Workflow:
+- Navigate to the study directory: `cd gen-2024`
+- Run the pipeline: `dvc exp run`
+- Commit & push results with Git and DVC
