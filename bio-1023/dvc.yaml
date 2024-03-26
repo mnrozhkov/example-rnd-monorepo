@@ -1,0 +1,29 @@
+metrics:
+- dvclive/metrics.json
+plots:
+- dvclive/plots/metrics:
+    x: step
+- dvclive/plots/custom/errors_vs_leafs.json:
+    template: simple
+    x: Max Leaf Nodes
+    y: Error
+    title: Errors vs Max Leaf Nodes
+artifacts:
+  manifest:
+    path: manifests/manifests.pkl
+    type: model
+    labels:
+    - bio-1023
+  data-bio-1023:
+    path: data/features.csv
+    type: dataset
+    labels:
+    - bio-1023
+    meta:
+    - columns:
+      - feature_1
+      - feature_2
+      - feature_3
+      - feature_4
+      - feature_5
+      - target

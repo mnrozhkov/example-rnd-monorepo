@@ -1,0 +1,5 @@
+outs:
+- md5: d5cef97c23a5f2c2a1e27e0305c4bc2b
+  size: 378953
+  hash: md5
+  path: manifests.pkl

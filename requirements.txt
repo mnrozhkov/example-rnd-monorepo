@@ -1,9 +1,7 @@
 dvc>=3.48.0
 dvclive>=3.45.0
 joblib
+jupyterlab
 pandas
-pytorch-lightning
 scikit-learn
-torch
-torchvision
 
