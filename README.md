@@ -58,17 +58,35 @@ dvc push
 dvc pull
 ```
 
-### 4 - Pull specific artifact from remote storage
+#### 3.1 - Pull specific artifact (alternative ways)
+
+**[dvc pull](https://dvc.org/doc/command-reference/pull)** 
+
+> Download tracked files or directories from [remote storage](https://dvc.org/doc/user-guide/data-management/remote-storage) based on the current `dvc.yaml` and `.dvc` files, and make them visible in the workspace.
+> 
 
 ```bash
-# git checkout <branch>/<commit>
-dvc pull bio-1023/manifest/manifest.pkl
+git checkout a972308              # Commit created after DVC Remote setup
+dvc pull bio-1023/data/features.csv
 ```
 
-### 5 - Pull specific artifact from remote storage
+**[dvc get](https://dvc.org/doc/command-reference/get)** 
+
+> Download a file or directory tracked by DVC or by Git into the current working directory.
+> 
 
 ```bash
-# git checkout <branch>/<commit>
-dvc artifacts get bio-1023/manifest
+dvc get https://github.com/mnrozhkov/example-rnd-monorepo \
+    bio-1023/data/features.csv \
+    -o bio-1023/data/features.csv \
+    --rev a972308
 ```
 
+**dvc artifacts get** 
+
+```bash
+dvc artifacts get https://github.com/mnrozhkov/example-rnd-monorepo \
+    bio-1023:data-bio-1023 \
+    -o bio-1023/data/features.csv \
+    --rev v2.0.1
+```
